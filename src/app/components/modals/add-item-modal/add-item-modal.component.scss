@@ -1,0 +1,72 @@
+@import "../../../../shared/themes/theme-default";
+@import "../../../../shared/themes/mixins";
+
+.addItemModal {
+  &-container {
+    @include modal-container;
+  }
+
+  &-closeButtonContainer {
+    @include modal-close-button-container;
+  }
+
+  &-closeButton {
+    @include modal-close-button;
+  }
+
+  &-closeButton:hover {
+    color: $color-tea-green;
+  }
+
+  &-header {
+    color: $color-alabaster;
+    text-align: center;
+  }
+
+  &-nameInputContainer,
+  &-importanceInputContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-nameInputLabel,
+  &-importanceInputLabel {
+    color: $color-alabaster;
+    font-size: 16pt;
+    margin-block: 20px 5px;
+  }
+
+  &-nameInputField,
+  &-importanceInputOption,
+  &-importanceInputField {
+    font-size: 16pt;
+  }
+
+  &-importanceInputField {
+    width: 274px;
+  }
+
+  &-createItemButtonContainer {
+    margin-top: 50px;
+  }
+
+  &-createItemButton {
+    @include modal-action;
+    background-color: $color-tea-green;
+  }
+
+  &-createItemButton:hover {
+    background-color: $color-tea-green-dark;
+  }
+
+  &-createItemButton:disabled {
+    background-color: $color-alabaster;
+    cursor: not-allowed;
+  }
+
+  &-createItemButtonIcon {
+    font-weight: 900;
+    font-size: 20pt;
+    margin-right: 5px;
+  }
+}

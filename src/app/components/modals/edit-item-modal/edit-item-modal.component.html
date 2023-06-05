@@ -1,0 +1,21 @@
+<div class="editItemModal-container">
+  <div class="editItemModal-closeButtonContainer">
+    <button class="editItemModal-closeButton" (click)="close()">X</button>
+  </div>
+  <h2 class="editItemModal-header">Edit Item</h2>
+  <div class="editItemModal-nameInputContainer">
+    <label for="nameInput" class="editItemModal-nameInputLabel">Name</label>
+    <input type="text" class="editItemModal-nameInputField" id="nameInput" [(ngModel)]="item.desc">
+  </div>
+  <div class="editItemModal-importanceInputContainer">
+    <label for="importanceInput" class="editItemModal-importanceInputLabel">Importance</label>
+    <select class="editItemModal-importanceInputField" id="importanceInput" [(ngModel)]="item.importance">
+      <option class="editItemModal-importanceInputOption" *ngFor="let importanceLevel of importanceLevels | keyvalue">{{ importanceLevel.value }}</option>
+    </select>
+  </div>
+  <div class="editItemModal-actionsContainer">
+    <button class="editItemModal-saveButton" (click)="saveItem()" [disabled]="!item.desc">Save</button>
+    <button class="editItemModal-deleteButton" (click)="deleteItem()">Delete</button>
+  </div>
+</div>
+

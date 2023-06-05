@@ -1,0 +1,36 @@
+@import "src/shared/themes/theme-default";
+
+.headerBar {
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+  }
+
+  &-header {
+    color: $color-alabaster;
+    grid-column: 2;
+    justify-self: center;
+  }
+
+  &-addButton {
+    all: unset;
+    align-self: center;
+    color: $color-alabaster;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 25pt;
+    font-weight: 800;
+    grid-column: 3;
+    justify-self: center;
+    transition: color 0.3s ease-in-out;
+  }
+
+  &-addButton:hover {
+    color: $color-tea-green;
+  }
+
+  &-modal::backdrop {
+    background-color: black;
+    opacity: 0.75;
+  }
+}

@@ -1,0 +1,46 @@
+@import "./theme-default";
+
+@mixin modal-container {
+  align-items: center;
+  background-color: $color-onyx;
+  border: 5px solid $color-alabaster;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  inset: 0;
+  justify-content: flex-start;
+  margin: auto;
+  position: fixed;
+  width: 500px;
+}
+
+@mixin modal-close-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-inline: auto;
+  margin-top: 10px;
+  width: 90%;
+}
+
+@mixin modal-close-button {
+  all: unset;
+  color: $color-alabaster;
+  cursor: pointer;
+  font-family: monospace;
+  font-size: 25pt;
+  transition: color 0.3s ease-in-out;
+}
+
+@mixin modal-action {
+  all: unset;
+  align-items: center;
+  border-radius: 25px;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  font-size: 16pt;
+  justify-content: center;
+  padding: 5px 15px;
+  transition: background-color 0.3s ease-in-out;
+}

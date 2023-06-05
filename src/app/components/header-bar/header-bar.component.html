@@ -1,0 +1,8 @@
+<div class="headerBar-container">
+  <h1 class="headerBar-header">To-Do List</h1>
+  <button class="headerBar-addButton" (click)="showModal()">+</button>
+</div>
+
+<dialog class="headerBar-modal" id="addItemModal">
+  <app-add-item-modal (closeModal)="closeModal($event)"></app-add-item-modal>
+</dialog>

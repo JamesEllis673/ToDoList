@@ -1,0 +1,21 @@
+<div class="addItemModal-container">
+  <div class="addItemModal-closeButtonContainer">
+    <button class="addItemModal-closeButton" (click)="close()">X</button>
+  </div>
+  <h2 class="addItemModal-header">Add Item</h2>
+  <div class="addItemModal-nameInputContainer">
+    <label for="nameInput" class="addItemModal-nameInputLabel">Name</label>
+    <input type="text" class="addItemModal-nameInputField" id="nameInput" [(ngModel)]="item.desc">
+  </div>
+  <div class="addItemModal-importanceInputContainer">
+    <label for="importanceInput" class="addItemModal-importanceInputLabel">Importance</label>
+    <select class="addItemModal-importanceInputField" id="importanceInput" [(ngModel)]="item.importance">
+      <option class="addItemModal-importanceInputOption" *ngFor="let importanceLevel of importanceLevels | keyvalue">{{ importanceLevel.value }}</option>
+    </select>
+  </div>
+  <div class="addItemModal-createItemButtonContainer">
+    <button class="addItemModal-createItemButton" (click)="createItem()" [disabled]="!item.desc">
+      <span class="addItemModal-createItemButtonIcon">+</span> Create Item
+    </button>
+  </div>
+</div>

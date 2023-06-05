@@ -1,0 +1,81 @@
+@import "../../../../shared/themes/theme-default";
+@import "../../../../shared/themes/mixins";
+
+.editItemModal {
+  &-container {
+    @include modal-container;
+  }
+
+  &-closeButtonContainer {
+    @include modal-close-button-container;
+  }
+
+  &-closeButton {
+    @include modal-close-button;
+  }
+
+  &-closeButton:hover {
+    color: $color-tea-green;
+  }
+
+  &-header {
+    color: $color-alabaster;
+    text-align: center;
+  }
+
+  &-nameInputContainer,
+  &-importanceInputContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-nameInputLabel,
+  &-importanceInputLabel {
+    color: $color-alabaster;
+    font-size: 16pt;
+    margin-block: 20px 5px;
+  }
+
+  &-nameInputField,
+  &-importanceInputOption,
+  &-importanceInputField {
+    font-size: 16pt;
+  }
+
+  &-importanceInputField {
+    width: 274px;
+  }
+
+  &-actionsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    width: 60%;
+  }
+
+  &-saveButton,
+  &-deleteButton {
+    @include modal-action;
+  }
+
+  &-saveButton {
+    background-color: $color-tea-green;
+  }
+
+  &-saveButton:hover {
+    background-color: $color-tea-green-dark;
+  }
+
+  &-saveButton:disabled {
+    background-color: $color-alabaster;
+    cursor: not-allowed;
+  }
+
+  &-deleteButton {
+    background-color: $color-claret-light;
+  }
+
+  &-deleteButton:hover {
+    background-color: $color-claret;
+  }
+}
