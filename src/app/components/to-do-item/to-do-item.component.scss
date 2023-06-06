@@ -17,6 +17,9 @@
     cursor: pointer;
     display: flex;
     height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     width: 100%;
   }
 
